@@ -1,7 +1,7 @@
 # dup_remove
 python code for removing duplicate files
 
-to ude, simpley run the python script and pass it the root directory you want to remove duplicates from.
+to use, simpley run the python script and pass it the root directory you want to remove duplicates from.
 for example:
 `python remove_duplicates.py {path_to_dir}`
 the script will go over all files in the directory and any sub-directories under it and will list all the duplicate files before removing them.

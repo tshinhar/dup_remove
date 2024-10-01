@@ -40,17 +40,3 @@ def remove_duplicate_files(duplicates, confirmed=False):
                     print(f"{file_path} has been deleted.\n")
                 else:
                     print("Duplicate file was not deleted")
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Remove duplicate files")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
-    parser.add_argument(
-        "-y", "--yes", action="store_true", help="pre-confirm files removal"
-    )
-    parser.add_argument("root_path", nargs="+", help="Path to the root directory")
-    # Parse the command-line arguments
-    args = parser.parse_args()
-
-    for path in args.root_path:
-        duplicates = find_duplicate_files(path)
-        remove_duplicate_files(duplicates, args.yes)
